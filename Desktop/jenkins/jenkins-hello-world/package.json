@@ -1,0 +1,7 @@
+{
+  "name": "calculatrice",
+  "version": "1.0.0",
+  "main": "serveur.js",
+  "scripts": { "start": "node serveur.js" },
+  "dependencies": { "express": "^4.18.2" }
+}

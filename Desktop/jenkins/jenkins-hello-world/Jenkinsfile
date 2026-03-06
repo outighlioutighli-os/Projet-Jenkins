@@ -1,0 +1,18 @@
+pipeline {
+    agent any
+    tools {
+        nodejs 'node' // Doit correspondre au nom configuré dans Jenkins
+    }
+    stages {
+        stage('Installation') {
+            steps {
+                bat 'npm install'
+            }
+        }
+        stage('Build') {
+            steps {
+                echo 'Application prête pour le build !'
+            }
+        }
+    }
+}
