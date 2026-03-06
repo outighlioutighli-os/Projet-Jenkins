@@ -1,0 +1,24 @@
+pipeline {
+    agent any
+    tools {
+        nodejs 'node' 
+    }
+    stages {
+        stage('Install') {
+            steps {
+                bat 'npm install'
+            }
+        }
+        stage('Test') { // Nouveau stage dédié aux tests réels
+            steps {
+                echo 'Exécution des tests avec Jest...'
+                bat 'npm test' 
+            }
+        }
+        stage('Build/Package') {
+            steps {
+                echo 'Tests réussis ! Préparation du build...'
+            }
+        }
+    }
+}
