@@ -1,17 +1,18 @@
 pipeline {
     agent any
     tools {
-        nodejs 'node' // Doit correspondre au nom configuré dans Jenkins
+        nodejs 'node' // Nom configuré à l'étape 2.3
     }
     stages {
-        stage('Installation') {
+        stage('Install') {
             steps {
                 bat 'npm install'
             }
         }
-        stage('Build') {
+        stage('Build/Test') {
             steps {
-                echo 'Application prête pour le build !'
+                echo 'Simulation des tests...'
+                // bat 'npm test' (si tu as des tests)
             }
         }
     }

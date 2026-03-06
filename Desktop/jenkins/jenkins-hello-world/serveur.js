@@ -1,5 +1,6 @@
-const app = require('./index');
-const port = 8080;
-app.listen(port, () => {
-  console.log(`Serveur sur http://localhost:${port}`);
+const app = require('./index'); // Import de la logique
+const PORT = process.env.PORT || 80800;
+
+app.listen(PORT, () => {
+    console.log(`Serveur de la calculatrice démarré sur http://localhost:${PORT}`);
 });
